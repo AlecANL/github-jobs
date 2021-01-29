@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="./assets/img/devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>GithubJobs | Devchallenges</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-title"><strong>Github</strong><span>jobs</span></h1>
+      <div class="hero">
+        <form class="form-search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="City,state,zip code or country"
+            aria-label="searc field"
+            class="search-field"
+          />
+          <input
+            type="submit"
+            class="btn btn-primary search-button"
+            value="Search"
+            aria-label="search-button"
+          />
+        </form>
+      </div>
+    </header>
+    <main class="main-content">
+      <aside class="options-search">
+        <section class="search-time">
+          <input type="checkbox" name="time" id="fulltime" />
+          <label for="fulltime">Full time</label>
+        </section>
+        <section class="search-country">
+          <h3 class="search-country__title">location</h3>
+          <div class="form-control">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+              />
+            </svg>
+            <input
+              type="text"
+              class="search-country__field"
+              placeholder="City,state,zip code or country"
+              aria-label="search by country"
+            />
+          </div>
+          <div class="options">
+            <div class="form-control">
+              <input
+                type="radio"
+                name="city"
+                id="london"
+                aria-label="option london"
+              />
+              <label for="london"> London</label>
+            </div>
+            <div class="form-control">
+              <input
+                type="radio"
+                name="city"
+                id="amsterdan"
+                aria-label="option amsterdan"
+              />
+              <label for="amsterdan">Amsterdan</label>
+            </div>
+            <div class="form-control">
+              <input
+                type="radio"
+                name="city"
+                id="ny"
+                aria-label="option new york"
+              />
+              <label for="ny">New York</label>
+            </div>
+            <div class="form-control">
+              <input
+                type="radio"
+                name="city"
+                id="berlin"
+                aria-label="option berlin"
+              />
+              <label for="berlin">Berlin</label>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <section class="jobs">
+        <article class="card-job">
+          <div class="card-job__image">
+            <img
+              src="https://github-jobs.s3.amazonaws.com/DrnFLpBoDeyvqzhpwbvvd5Wt?response-content-disposition=inline%3B%20filename%3D%22logo_circle%20crop_green.png%22%3B%20filename%2A%3DUTF-8%27%27logo_circle%2520crop_green.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJENXOYUQN2IQEWRA%2F20210124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210124T145520Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=70d8c05aaab7474eeb808fc03d28370bcfc9a40cb0510e544b9a581d99bd979e"
+              alt="image for bussiness"
+            />
+          </div>
+          <div class="card-job__data">
+            <p>Lev</p>
+            <h3>Senio Engineer</h3>
+            <span class="tag-time">Full time</span>
+            <div class="data-footer">
+              <div class="city">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                <span>City of work</span>
+              </div>
+              <div class="time">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                  />
+                </svg>
+                <span>Time ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="card-job">
+          <div class="card-job__image">
+            <img
+              src="https://github-jobs.s3.amazonaws.com/DrnFLpBoDeyvqzhpwbvvd5Wt?response-content-disposition=inline%3B%20filename%3D%22logo_circle%20crop_green.png%22%3B%20filename%2A%3DUTF-8%27%27logo_circle%2520crop_green.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJENXOYUQN2IQEWRA%2F20210124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210124T145520Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=70d8c05aaab7474eeb808fc03d28370bcfc9a40cb0510e544b9a581d99bd979e"
+              alt="image for bussiness"
+            />
+          </div>
+          <div class="card-job__data">
+            <p>Lev</p>
+            <h3>Senio Engineer</h3>
+            <span class="tag-time">Full time</span>
+            <div class="data-footer">
+              <div class="city">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                <span>City of work</span>
+              </div>
+              <div class="time">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                  />
+                </svg>
+                <span>Time ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="card-job">
+          <div class="card-job__image">
+            <img
+              src="https://github-jobs.s3.amazonaws.com/DrnFLpBoDeyvqzhpwbvvd5Wt?response-content-disposition=inline%3B%20filename%3D%22logo_circle%20crop_green.png%22%3B%20filename%2A%3DUTF-8%27%27logo_circle%2520crop_green.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJENXOYUQN2IQEWRA%2F20210124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210124T145520Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=70d8c05aaab7474eeb808fc03d28370bcfc9a40cb0510e544b9a581d99bd979e"
+              alt="image for bussiness"
+            />
+          </div>
+          <div class="card-job__data">
+            <p>Lev</p>
+            <h3>Senio Engineer</h3>
+            <span class="tag-time">Full time</span>
+            <div class="data-footer">
+              <div class="city">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+                <span>City of work</span>
+              </div>
+              <div class="time">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                  />
+                </svg>
+                <span>Time ago</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
