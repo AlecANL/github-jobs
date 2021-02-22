@@ -1,0 +1,221 @@
+$breakpoints: (
+  xl: 1024px,
+);
+
+@mixin from($bp) {
+  @if (map-has-key($breakpoints, $bp)) {
+    @media screen and (min-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+@mixin devMode($color) {
+  border: 1px solid $color;
+}
+
+:root {
+  --text-color: hsl(249, 20%, 18%);
+  --text-color-ligth: rgba(185, 189, 207, 1);
+  --bg-blue: rgba(30, 134, 255, 1);
+  --bg-color: #f6f7fb;
+  --just-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  min-width: 100vw;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-inline-size: 1200px;
+  margin: auto;
+}
+.main-title {
+  padding: 1rem 1rem;
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  span {
+    font-weight: lighter;
+    padding-left: 1rem;
+  }
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color: cornflowerblue;
+  background: url(../img/backgroundImg.png) center/cover no-repeat;
+  @include from(xl) {
+    height: 150px;
+  }
+}
+.form-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 90%;
+  background: var(--just-white);
+  border-radius: 0.5rem;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color-ligth);
+  }
+  @include from(xl) {
+    width: 40vw;
+  }
+}
+
+.search-field {
+  width: 58%;
+  padding: 1rem;
+  border: none;
+  color: var(--text-color-ligth);
+  outline: none;
+  &::placeholder {
+    color: var(--text-color-ligth);
+  }
+  @include from(xl) {
+    width: 82%;
+  }
+}
+.options-search {
+  font-size: 1.7rem;
+  .search-time {
+    padding: 2rem;
+  }
+  .search-country {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .search-country__field {
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    color: var(--text-color-ligth);
+    &::placeholder {
+      color: var(--text-color-ligth);
+    }
+  }
+  .search-country__title {
+    text-transform: uppercase;
+  }
+}
+.search-country .form-control {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--just-white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  svg {
+    fill: var(--text-color-ligth);
+  }
+}
+.options .form-control {
+  background-color: transparent;
+  box-shadow: none;
+  label {
+    padding-left: 0.5rem;
+  }
+}
+
+/* Cards */
+.card-job {
+  // display: flex;
+  // width: 90%;
+  // height: 130px;
+  // min-height: 130px;
+  // margin: 2rem auto;
+  // font-size: 1.3rem;
+  // background-color: var(--just-white);
+  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  &__image {
+    width: 100px;
+    padding: 1rem;
+  }
+  &__image img {
+    padding-top: 1rem;
+    object-fit: cover;
+  }
+  &__data {
+    padding: 1rem;
+    width: 100%;
+  }
+  .data-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--text-color-ligth);
+    font-size: 1rem;
+    svg {
+      fill: var(--text-color-ligth);
+    }
+  }
+}
+.tag-time {
+  border: 1px solid hsl(249, 20%, 18%);
+  width: 70px;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+.time,
+.city {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Button */
+.btn {
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.btn-primary {
+  background-color: var(--bg-blue);
+  color: var(--just-white);
+}
+
+/* End buttons */
+.main-content {
+  @include devMode(red);
+  // @include from(xl) {
+  //   display: grid;
+  //   grid-template-columns: 30vw  60vw;
+  //   width: 90vw;
+  //   margin: 0 auto;
+  // }
+}
+.jobs {
+  @include devMode(blue);
+}
