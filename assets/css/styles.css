@@ -183,6 +183,9 @@ form svg {
 @media screen and (min-width: 1024px) {
   .search-country {
     inline-size: 300px;
+    position: -webkit-sticky;
+    position: sticky;
+    inset-block-start: 0;
   }
 }
 
