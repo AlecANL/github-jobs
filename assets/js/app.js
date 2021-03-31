@@ -1,7 +1,8 @@
-import { Card } from './components/Card.js';
+import { Card, OptionSearch } from './index.js';
 
 const $jobLists = document.getElementById('job-lists'),
-  $loader = document.getElementById('loader');
+  $loader = document.getElementById('loader'),
+  $asideSearchOptions = document.getElementById('aside-country');
 
 let isLoader = true;
 
@@ -44,4 +45,13 @@ async function render() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', render);
+function parseHTMLComponent(component, $container) {
+  const el = document.createElement('div');
+  el.innerHTML = component;
+  $container.appendChild(el.firstElementChild);
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  render();
+  parseHTMLComponent(OptionSearch(), $asideSearchOptions);
+});

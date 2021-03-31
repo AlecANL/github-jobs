@@ -1,0 +1,44 @@
+@use '../../utils/colors' as c;
+@use '../../utils/mixins' as m;
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 16px;
+  margin-block: 30px;
+  block-size: 138px;
+  background: url(../images/hero-image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.form {
+  background-color: var(--just-white);
+  display: flex;
+  justify-content: space-around;
+  gap: 6px;
+  padding-block: 10px;
+  margin-inline: 18px;
+  border-radius: 4px;
+  img {
+    margin-inline-start: 10px;
+  }
+  input[type='text'] {
+    padding-block: 9px;
+    inline-size: 30%;
+    border: none;
+    font-size: 16px;
+  }
+  @include m.from(m) {
+    padding-inline: 8px;
+    input[type='text'] {
+      inline-size: 100%;
+    }
+  }
+  @include m.from(l) {
+    inline-size: 50%;
+  }
+}
