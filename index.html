@@ -14,9 +14,9 @@
       type="image/x-icon"
       href="https://devchallenges.io/"
     />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -38,126 +38,130 @@
       <div class="wrapper">
         <div class="hero-content">
           <form class="form">
-            <img src="./assets/images/icons/work-icon.svg" alt="icon work">
-            <input placeholder="Title, companies, expertise." type="text" aria-label="search jobs">
+            <img src="./assets/images/icons/work-icon.svg" alt="icon work" />
+            <input
+              placeholder="Title, companies, expertise."
+              type="text"
+              aria-label="search jobs"
+            />
             <button class="btn btn--soft-blue" type="submit">Search</button>
           </form>
         </div>
       </div>
     </section>
-    <!-- <header class="header">
-      <div class="wrapper">
-        <div class="header-content">
-          <h1 class="main-title"><strong>Github</strong><span>jobs</span></h1>
-          <div class="hero">
-            <form class="form-search">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-              >
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-              <input
-                type="text"
-                placeholder="City,state,zip code or country"
-                aria-label="search field"
-                class="search-field"
-              />
-              <input
-                type="submit"
-                class="btn btn--primary search-button"
-                value="Search"
-                aria-label="search-button"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
     <main class="main">
       <div class="wrapper">
         <div class="main-content">
-          <aside class="options-search">
-            <section class="search-time">
-              <input type="checkbox" name="time" id="fulltime" />
-              <label for="fulltime">Full time</label>
-            </section>
-            <section class="search-country" id="aside-country">
-              <h3 class="search-country__title">location</h3>
-              <div class="search-country__form">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                >
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  />
-                </svg>
-                <input
-                  type="text"
-                  class="search-country__field"
-                  placeholder="City,state,zip code or country"
-                  aria-label="search by country"
+          <aside class="locations">
+            <div class="search-time">
+              <input type="checkbox" name="full-time" id="search-time" />
+              <label for="search-time">Full time</label>
+            </div>
+            <div class="locations__search">
+              <span>locations</span>
+              <form class="locations-form">
+                <img
+                  src="./assets/images/icons/public-24px.svg"
+                  alt="wolrd icon"
                 />
-              </div>
-              <!-- <div class="options">
-                <div class="form-control">
-                  <input
-                    type="radio"
-                    name="city"
-                    id="london"
-                    aria-label="option london"
-                  />
-                  <label for="london"> London</label>
+                <input
+                  placeholder="City, state, zip code or country"
+                  type="text"
+                  aria-label="search by locations"
+                />
+              </form>
+              <div class="countries-list">
+                <div class="country">
+                  <input type="radio" name="country" id="london" />
+                  <label for="london">London</label>
                 </div>
-                <div class="form-control">
-                  <input
-                    type="radio"
-                    name="city"
-                    id="amsterdan"
-                    aria-label="option amsterdan"
-                  />
-                  <label for="amsterdan">Amsterdan</label>
+                <div class="country">
+                  <input type="radio" name="country" id="amsterdam" />
+                  <label for="amsterdam">Amsterdam</label>
                 </div>
-                <div class="form-control">
-                  <input
-                    type="radio"
-                    name="city"
-                    id="ny"
-                    aria-label="option new york"
-                  />
+                <div class="country">
+                  <input type="radio" name="country" id="ny" />
                   <label for="ny">New York</label>
                 </div>
-                <div class="form-control">
-                  <input
-                    type="radio"
-                    name="city"
-                    id="berlin"
-                    aria-label="option berlin"
-                  />
+                <div class="country">
+                  <input type="radio" name="country" id="berlin" />
                   <label for="berlin">Berlin</label>
                 </div>
-              </div> -->
-            </section>
-          </aside>
-          <!-- <section class="jobs" id="job-lists">
-            <div class="lds-ripple" id="loader">
-              <div></div>
-              <div></div>
+              </div>
             </div>
-          </section> -->
+          </aside>
+          <section class="jobs-container">
+            <article class="job-card" data-id="1">
+              <div class="job-card__image">
+                <img
+                  src="https://jobs.github.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaytmIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd31fbca53046e3c0189b75d4a131cd66178c992/logomark-cci-135x135-c.jpeg"
+                  alt="awesome image"
+                />
+              </div>
+              <div class="job-card__description">
+                <span class="company">Kasisto</span>
+                <p class="name">Staff Software Engineer, Data Platform</p>
+                <span class="time">Full time</span>
+              </div>
+              <div class="job-card__time">
+                <span>
+                  <img
+                    width="15"
+                    height="15"
+                    src="./assets/images/icons/public-24px.svg"
+                    alt="icon wolrd"
+                  />
+                  Full time
+                </span>
+                <span>
+                  <img
+                    width="15"
+                    height="15"
+                    src="./assets/images/icons/timer-24px.svg"
+                    alt="time icon"
+                  />
+                  today
+                </span>
+              </div>
+            </article>
+            <article class="job-card" data-id="1">
+              <div class="job-card__image">
+                <img
+                  src="https://jobs.github.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaytmIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bd31fbca53046e3c0189b75d4a131cd66178c992/logomark-cci-135x135-c.jpeg"
+                  alt="awesome image"
+                />
+              </div>
+              <div class="job-card__description">
+                <span class="company">Kasisto</span>
+                <p class="name">Full Stack Web Developer</p>
+                <span class="time">Full time</span>
+              </div>
+              <div class="job-card__time">
+                <span>
+                  <img
+                    width="15"
+                    height="15"
+                    src="./assets/images/icons/public-24px.svg"
+                    alt="icon wolrd"
+                  />
+                  Full time
+                </span>
+                <span>
+                  <img
+                    width="15"
+                    height="15"
+                    src="./assets/images/icons/timer-24px.svg"
+                    alt="time icon"
+                  />
+                  today
+                </span>
+              </div>
+            </article>
+          </section>
         </div>
       </div>
-    </main> -->
+    </main>
+
     <!-- <script type="module" src="./assets/js/app.js"></script> -->
   </body>
 </html>

@@ -1,0 +1,74 @@
+@use '../utils/colors' as c;
+@use '../utils/mixins' as m;
+
+.job-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  block-size: auto;
+  margin-block: 24px;
+  background-color: var(--just-white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  &__image {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+  &__image {
+    object-fit: contain;
+  }
+  &__description {
+    padding-block-start: 12px;
+    margin-block-end: 15px;
+  }
+  &__description .company {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+  &__description .name {
+    font-family: 'Roboto', sans-serif;
+    margin-block-start: 8px;
+    margin-block-end: 12px;
+    font-size: 16px;
+  }
+  &__description .time {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #334680;
+    border-radius: 4px;
+    padding-block: 6px;
+    padding-inline: 8px;
+  }
+  &__description p {
+    margin: 0;
+  }
+  &__time {
+    grid-column: span 2;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    padding-block-end: 12px;
+    padding-inline-end: 39px;
+  }
+  &__time span {
+    font-size: 12px;
+  }
+  @include m.from(x) {
+    position: relative;
+    display: flex;
+    &__image {
+      inline-size: 100px;
+    }
+
+    &__time {
+      position: absolute;
+      inset-inline-end: 0;
+      justify-self: flex-end;
+      justify-self: center;
+      align-self: flex-end;
+    }
+  }
+}

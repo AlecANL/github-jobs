@@ -3,7 +3,6 @@
 
 .header-content {
   margin-inline: 16px;
-  @include m.debug(red);
   &__heading {
     margin-block: 16px;
     font-size: 24px;
