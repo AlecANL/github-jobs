@@ -40,7 +40,17 @@ async function render(query, param, component, $container) {
   }
 }
 
+function showDetailsByJob(e) {
+  const id = e.target.dataset.id;
+  if (!id) {
+    return;
+  }
+  console.log(id);
+  const jobs = currentJobs.find(job => job.id === id);
+  console.log(jobs);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   render('search', 'nonde', Card, $jobLists);
-  // parseHTMLComponent(OptionSearch(), $asideSearchOptions);
+  $jobLists.addEventListener('click', showDetailsByJob);
 });

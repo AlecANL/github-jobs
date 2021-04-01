@@ -10,10 +10,12 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   &__image {
-    inline-size: 100%;
-    block-size: 100%;
-    padding: 10px;
-    align-self: center;
+    display: flex;
+    inline-size: 80%;
+    block-size: 80%;
+    align-items: center;
+    padding-inline: 10px;
+    pointer-events: none;
   }
   &__image {
     object-fit: contain;
@@ -21,6 +23,7 @@
   &__description {
     padding-block-start: 12px;
     margin-block-end: 15px;
+    pointer-events: none;
   }
   &__description .company {
     font-size: 12px;
@@ -67,6 +70,8 @@
     display: flex;
     &__image {
       inline-size: 100px;
+      padding: 10px;
+      align-self: center;
     }
 
     &__time {

@@ -59,10 +59,12 @@ a {
   border-radius: 4px;
 }
 .job-card__image {
-  inline-size: 100%;
-  block-size: 100%;
-  padding: 10px;
-  align-self: center;
+  display: flex;
+  inline-size: 80%;
+  block-size: 80%;
+  align-items: center;
+  padding-inline: 10px;
+  pointer-events: none;
 }
 .job-card__image {
   object-fit: contain;
@@ -70,6 +72,7 @@ a {
 .job-card__description {
   padding-block-start: 12px;
   margin-block-end: 15px;
+  pointer-events: none;
 }
 .job-card__description .company {
   font-size: 12px;
@@ -118,6 +121,8 @@ a {
   }
   .job-card__image {
     inline-size: 100px;
+    padding: 10px;
+    align-self: center;
   }
   .job-card__time {
     position: absolute;
