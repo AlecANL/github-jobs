@@ -12,6 +12,7 @@
 }
 
 .jobs-container {
+  position: relative;
   @include m.from(m) {
     padding-inline: 50px;
   }

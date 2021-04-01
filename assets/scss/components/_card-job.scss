@@ -12,6 +12,8 @@
   &__image {
     inline-size: 100%;
     block-size: 100%;
+    padding: 10px;
+    align-self: center;
   }
   &__image {
     object-fit: contain;
@@ -54,7 +56,11 @@
     padding-inline-end: 39px;
   }
   &__time span {
+    display: flex;
+    gap: 8px;
     font-size: 12px;
+    align-self: center;
+    color: #b9bdcf;
   }
   @include m.from(x) {
     position: relative;

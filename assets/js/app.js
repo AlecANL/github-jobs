@@ -1,26 +1,17 @@
-import { Card, OptionSearch } from './index.js';
+import { Card, OptionSearch, getRandomJobList } from './index.js';
 
-const $jobLists = document.getElementById('job-lists'),
+const $jobLists = document.getElementById('jobs-container'),
   $loader = document.getElementById('loader'),
   $asideSearchOptions = document.getElementById('aside-country');
 
+let currentJobs;
 let isLoader = true;
 
-async function getJobList() {
-  const api = 'https://jobs.github.com/positions.json?search=node';
-  const cors = `https://api.allorigins.win/get?url=${encodeURIComponent(api)}`;
-
-  const response = await fetch(cors);
-  const data = await response.json();
-  return JSON.parse(data.contents);
-}
-
-async function getRandomJobList(limit = 5) {
-  const random = Math.floor(Math.random() * 30);
-  const jobs = await getJobList();
-  const results = jobs.slice(random, random + limit);
-  return results;
-}
+const exampleQuery = {
+  full_time: 'full_time',
+  search: 'search',
+  location: 'location',
+};
 
 function hasLoader() {
   if (!isLoader) {
@@ -29,29 +20,27 @@ function hasLoader() {
   return ($loader.style.display = 'block');
 }
 
-function loadComponent(objJob, $container) {
+function loadComponent(job, component) {
   const el = document.createElement('div');
-  el.innerHTML = Card(objJob);
-  $container.appendChild(el.firstElementChild);
+  el.innerHTML = component(job);
+  return el.firstElementChild;
 }
 
-async function render() {
-  const jobs = await getRandomJobList();
+async function render(query, param, component, $container) {
+  const jobs = await getRandomJobList(query, param);
+  currentJobs = jobs;
   if (jobs) {
     isLoader = false;
     hasLoader();
-    console.log(jobs);
-    jobs.forEach(el => loadComponent(el, $jobLists));
+    console.log(currentJobs);
+    // jobs.forEach(el => loadComponent(el, $jobLists));
+    currentJobs.forEach(job => {
+      $container.append(loadComponent(job, component));
+    });
   }
 }
 
-function parseHTMLComponent(component, $container) {
-  const el = document.createElement('div');
-  el.innerHTML = component;
-  $container.appendChild(el.firstElementChild);
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-  render();
-  parseHTMLComponent(OptionSearch(), $asideSearchOptions);
+document.addEventListener('DOMContentLoaded', function () {
+  render('search', 'nonde', Card, $jobLists);
+  // parseHTMLComponent(OptionSearch(), $asideSearchOptions);
 });
